@@ -58,7 +58,7 @@ This:\
 `https://res.cloudinary.com/hecsa/image/upload/$title_!Title%20Placeholder!/t_simonedenadaicom-blog-og-image/simonedenadai.com/og-sample`
 
 Renders this:\
-![OG Image](https://res.cloudinary.com/hecsa/image/upload/$title_!Post%20Title!/t_simonedenadaicom-blog-og-image/simonedenadai.com/og-sample)
+![OG Image](https://res.cloudinary.com/hecsa/image/upload/$title_!Title%20Placeholder!/t_simonedenadaicom-blog-og-image/simonedenadai.com/og-sample)
 
 ## **Sanity (CMS)**
 
