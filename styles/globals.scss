@@ -1,0 +1,199 @@
+@import './bootstrap-custom.scss';
+
+
+#__next {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(100vh, 1fr) auto;
+  grid-template-areas:
+    "content"
+    "footer";
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  will-change: transform background-color;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 0.7em;
+  transition: background-color 0.5s ease;
+  background-color: transparent;
+
+  @include media-breakpoint-down(lg) {
+    background-color: rgba(0,0,0,.8);
+    padding: 5px 0;
+  }
+
+  &.scrolling {
+    @include media-breakpoint-up(lg) {
+      background-color: rgba(0, 0, 0, .5);
+    }
+  }
+
+  ul {
+    li {
+      padding: 15px 35px;
+      a {
+        letter-spacing: 0.05rem;
+        padding: 5px;
+        color: $body-color;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .mobile-nav-toggle {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    .ham {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 400ms;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    
+      &.active {
+        transform: rotate(45deg);
+    
+        .top {
+          stroke-dashoffset: -68px;
+        }
+    
+        .bottom {
+          stroke-dashoffset: -68px;
+        }
+      }
+    
+      .top {
+        stroke-dasharray: 40 121;
+      }
+      
+      .bottom {
+        stroke-dasharray: 40 121;
+      }
+    
+      .line {
+        fill:none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke:#ffffff;
+        stroke-width:5.5;
+        stroke-linecap:round;
+      }
+    }
+
+    &:not(.collapsed) {
+      .ham {
+        transform: rotate(45deg);
+    
+        .top {
+          stroke-dashoffset: -68px;
+        }
+    
+        .bottom {
+          stroke-dashoffset: -68px;
+        }
+      }
+    }
+
+  }
+}
+
+
+
+#main {
+  grid-area: content;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+#footer {
+  grid-area: footer;
+  display: flex;
+  padding: 3rem 0 1.5em 0;
+  color: $headings-color;
+  margin-top: 150px;
+  background: linear-gradient(0deg, #1f1f1f, transparent);
+  
+  a {
+    color: $headings-color;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+}
+
+.menu-spacer {
+  height: 150px;
+  width: 100%;
+}
+
+
+.cover-image-container {
+  position: relative;
+  width: 100%;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.full-image-container {
+  img {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.blurBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(200px);
+}
+
+* {
+  scroll-margin-top: 100px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+blockquote {
+  border-left: solid 2px white;
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+// Fix codeblocks line numbers width
+.linenumber.react-syntax-highlighter-line-number {
+  width: 3em;
+}

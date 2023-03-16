@@ -1,0 +1,62 @@
+@use '@/styles/bootstrap-variables' as bs;
+
+
+.orangeGradient {
+  pointer-events: none;
+  position: absolute;
+  z-index: -10;
+  width: 80vw;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.orangeGradient {
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #E8AD78;
+  opacity: .6;
+  top: 0;
+  left: 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .orangeGradient {
+    animation: 3s pulse infinite alternate;
+  }
+}
+
+
+@keyframes pulse {
+  from {
+    opacity: .3;
+  }
+  to {
+    opacity: .4;
+  }
+}
+
+
+.coverImage {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background-color: bs.$gray-500;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+/* Codeblocks */
+.codeblock {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  pre {
+    margin: 0 !important;
+  }
+
+  // Codeblock filename
+  small {
+    display: block;
+    margin-bottom: 10px;
+    color: bs.$gray-500;
+  }
+}

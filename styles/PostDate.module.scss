@@ -1,0 +1,6 @@
+@use '@/styles/bootstrap-variables' as bs;
+
+.postDate {
+    font-size: 0.8rem;
+    color: bs.$gray-500;
+}

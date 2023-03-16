@@ -1,0 +1,42 @@
+@import "/node_modules/bootstrap/scss/functions";
+
+$primary: #ffffff;
+
+$body-bg: #000000;
+$body-color: #FFFFFF;
+// $headings-color: #000000; // 212529
+
+
+$font-size-root: 20px;
+// $font-weight-base: 300;
+$font-family-sans-serif: var(--font-outfit), system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$headings-font-weight: bold;
+
+// $grid-gutter-width: 40px;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1380px
+) !default;
+
+// $btn-border-radius: 0;
+// $btn-border-radius-sm: 15px;
+// $btn-border-radius-lg: 15px;
+// $btn-padding-y: 12px;
+// $btn-padding-x: 25px;
+// $btn-font-size: 15px;
+// $btn-font-size-sm: 15px;
+// $btn-font-size-lg: 15px;
+// $btn-line-height: 1em;
+// $btn-font-weight: bold;
+
+// $input-border-radius: 0;
+// $form-check-input-border-radius: 0;
+
+@import "/node_modules/bootstrap/scss/variables";
+@import "/node_modules/bootstrap/scss/maps";
+@import "/node_modules/bootstrap/scss/mixins";
+@import "/node_modules/bootstrap/scss/utilities";
