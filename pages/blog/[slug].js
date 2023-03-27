@@ -57,7 +57,13 @@ const ptComponents = {
   },
   block: {
     h2: ({children}) => {
-      const titleId = slugify(children[0].toLowerCase())
+      console.log(children[0])
+      let titleId;
+      if (children[0].props?.text) {
+        titleId = slugify(children[0].props.text.toLowerCase())
+      } else {
+        titleId = slugify(children[0].toLowerCase())
+      }
       return (
         <h2 id={titleId} className="mt-5 mb-4">
           {children}
