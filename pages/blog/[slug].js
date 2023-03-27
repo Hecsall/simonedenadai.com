@@ -57,7 +57,7 @@ const ptComponents = {
   },
   block: {
     h2: ({children}) => {
-      const titleId = slugify(children[0].props.text.toLowerCase())
+      const titleId = slugify(children[0].toLowerCase())
       return (
         <h2 id={titleId} className="mt-5 mb-4">
           {children}
@@ -66,7 +66,7 @@ const ptComponents = {
           </a>
         </h2>
       )  
-  }
+    }
   }
 }
 
