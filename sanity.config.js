@@ -19,7 +19,6 @@ export default defineConfig({
   plugins: [
     deskTool({
       structure: (S, context) => {
-        console.log(S)
         return  S.list()
         .title('Content')
         .items([
