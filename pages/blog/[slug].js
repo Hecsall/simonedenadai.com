@@ -57,7 +57,6 @@ const ptComponents = {
   },
   block: {
     h2: ({children}) => {
-      console.log(children[0])
       let titleId;
       if (children[0].props?.text) {
         titleId = slugify(children[0].props.text.toLowerCase())
