@@ -5,6 +5,9 @@ import styles from '/styles/BlogPost.module.scss'
 
 
 export default function CodeBlock({ code, filename, highlightedLines, language }) {
+    // Read sh as bash for Prism syntax highlighter
+    language = language === 'sh' ? 'bash' : language
+    
     if (code) {
         return <>
             <div className={styles["codeblock"]}>
