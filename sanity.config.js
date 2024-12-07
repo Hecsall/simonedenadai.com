@@ -1,5 +1,5 @@
 import {defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
+import { structureTool } from 'sanity/structure'
 import {StarIcon} from '@sanity/icons'
 import {visionTool} from '@sanity/vision'
 import { apiVersion, dataset, projectId } from '@/lib/sanity.api'
@@ -17,7 +17,7 @@ export default defineConfig({
   dataset,
 
   plugins: [
-    deskTool({
+    structureTool({
       structure: (S, context) => {
         return  S.list()
         .title('Content')
