@@ -27,7 +27,7 @@ const ptComponents = {
             src={value.secure_url} 
             fill={true}
             priority
-            alt={value.context.custom.alt || ''} 
+            alt={value.context?.custom?.alt || ''} 
             sizes="
               (max-width: 575px) 530px,
               (max-width: 767px) 510px,
