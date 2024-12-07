@@ -14,7 +14,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   webpack(config, options) {
-    const { options: loaderOptions } = config.module.rules.find(rule => rule.test && rule.test.test('.svg'))
+    // const { options: loaderOptions } = config.module.rules.find(rule => rule.test && rule.test.test('.svg'))
     config.module.rules.push({
       test: /\.svg$/i,
 			issuer: /\.[jt]sx?$/,
