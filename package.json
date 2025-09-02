@@ -2,6 +2,14 @@
   "name": "simonedenadai.com",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "^18.20.8",
+    "npm": "^10.8.2"
+  },
+  "volta": {
+    "node": "18.20.8",
+    "npm": "10.8.2"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
