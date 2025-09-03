@@ -5,7 +5,7 @@ import styles from '@/styles/MySetup.module.scss'
 import Layout from '@/components/Layout'
 import PostTile from '@/components/PostTile'
 
-import {desktopComponents, deskSetup} from './constants'
+import {desktopComponents, deskSetup} from '@/constants'
 
 export default function MySetup() {
   return (
